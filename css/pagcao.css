@@ -1,0 +1,458 @@
+/*------------Reset---------------*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*--------------Variáveis----------------*/
+
+:root {
+    /*color*/
+    --background: #E7E9EC;
+    --primary: #E7E9EC;
+    --secondary: #FCAD0B;
+    --sucess: #1C9E02;
+    --warning: #FFA006;
+    --danger: #FF002B;
+    --black: #000000;
+    --neutrals: #c7c4c4;
+    --white: #fff;
+    --gradient: linear-gradient(to right top, var(--background), var(--secondary));
+    --gradient-2: linear-gradient(90deg, transparent 0%, #D10023, transparent 100%);
+    --text: var(--neutrals)
+
+     /*Tipografia*/
+    --ff-opensans:"Open Sans", sans-serif;
+
+    --fs-1: 3.5rem;
+    --fs--2-: 2.4rem;
+    --fs-3: 2rem;
+    --fs-4: 1.7rem;
+    --fs-5: 1.6rem;
+    --fs-6: 1.5rem;
+    --fs-7: 1.4rem;
+    --fs-f8: 1.2rem;
+
+    --weight-regular: 400;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /*espaço*/
+    --section-spacing: 60px;
+
+    /*borda*/
+    --border: hsl(240, 45%, 17%);
+    --border-30: hsla(267, 100%, 0.3);
+
+    /*borda radius*/
+    --radius-circle: 50%;
+    --radius-5: 5px;
+    --radius-3: 3px
+
+        /*==== transição ====*/
+        --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+    /*==== clip path ====*/
+    --clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    --clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+    --clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+    --clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+    --clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+    --clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+    --clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+    --clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+textarea,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    background: none;
+    border: none;
+    font: inherit;
+    /*herda da div pai*/
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+address {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--ff-opensans);
+    font-size: var(--fs-4);
+    font-weight: 1.6;
+    overflow: scroll;
+}
+
+/*configuração barra de rolagem*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+}
+
+/*HEADER*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    position: relative;
+    background: var(--gradient);
+    color: var(--secondary);
+    font-size: var(--fs-f8);
+    font-weight: var(--weight-semibold);
+    max-width: 120px;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    clip-path: var(--clip-path-3);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    color: var(--secondary);
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.header {
+    background-color: var(--background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12px;
+    z-index: 4;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list {
+    display: flex;
+}
+
+.header.active {
+    position: relative;
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar-link {
+    padding: 12px 15px;
+    text-transform: uppercase;
+    font-size: var(--fs-f8);
+    font-weight: var(--weight-semibold);
+    color: var(--neutrals);
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: var(--secondary);
+}
+
+.search-btn {
+    color: var(--neutrals);
+    font-size: var(--fs-3);
+    border: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.2);
+    color: var(--secondary);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*background:url(../img/Story\ confeitaria\ doces\ minimalista\ marrom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;*/
+}
+
+.filtro label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--black);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.filtro input[type="checkbox"] {
+  margin: 0;
+}
+
+
+
+/* === SIDEBAR DE FILTROS === */
+.sidebar {
+    width: 250px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius-5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2, .sidebar h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+    font-size: var(--fs-4);
+}
+
+.sidebar label {
+    font-size: var(--fs-f8);
+    color: var(--black);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.filtro input[type="checkbox"] {
+  margin: 0;
+}
+
+/* SEÇÃO DE PRODUTOS  */
+.produtos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ordenar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.ordenar label {
+    margin-right: 10px;
+    font-size: var(--fs-f8);
+    font-weight: var(--weight-semibold);
+}
+
+.ordenar select {
+    padding: 6px 10px;
+    border-radius: var(--radius-3);
+    border: 1px solid var(--neutrals);
+    font-size: var(--fs-f8);
+}
+
+/* === GRADE DE PRODUTOS === */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.produto {
+    background-color: var(--white);
+    border-radius: var(--radius-5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: var(--fs-6);
+    margin-bottom: 5px;
+    color: var(--black);
+}
+
+.produto p {
+    font-size: var(--fs-f8);
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-3);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: grey;
+}
+
+/*categoria*/
+
+.card-text2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    /* ou outro que combine com seu tema */
+    font-family: var(--ff-opensans);
+    padding-top: 60px;
+  }
+  
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas */
+    gap: 20px;
+    /* espaço entre os itens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .sobre-grid .item {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .sobre-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sobre-grid img:hover {
+    transform: scale(1.2);
+  }
+
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    padding: 40px 0;
+  }
+  
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  footer .container ul {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 30px;
+    list-style: none;
+  }
+  
+  footer .container h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  footer .container ul>p {
+    margin-bottom: 30px;
+  }
+  
+  footer .container .redes-social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  footer .container li {
+    margin: 10px 0;
+  }
+  
+  footer .container a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer .container a:hover {
+    text-decoration: underline;
+  }
+  
+  

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name title="OH MY DOG">
+    <meta name description content="">
+
+
+    <title>OH MY DOG!</title>
+
+    <!--link favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!--Links-->
+    <link rel="stylesheet" href="css/paggato.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+
+    <!--preload-->
+
+    <link rel="preload" as="image" href="img/Story confeitaria doces minimalista marrom.png" type="image/png">
+
+
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header class="header active">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/logo0.2-removebg-preview.png" alt="logo" width="250px" height="250px">
+            </a>
+
+
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Home</a>
+
+
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Contato</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Sobre Nós</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <a href="login2.html" class="btn">Entrar</a>
+
+            <button class="search-btn" aria-label="busca">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+
+        </div>
+
+        <br>
+
+        <main class="container">
+            <aside class="sidebar">
+                <h2>Filtrar Produtos</h2>
+                <!-- Filtros de categoria, preço, marca, etc. -->
+                <div class="filtro">
+                    <h3>Categorias</h3>
+                    <label><input type="checkbox"> Ração</label><br>
+                    <label><input type="checkbox"> Brinquedos</label><br>
+                    <label><input type="checkbox"> Petiscos e Ossos</label><br>
+                    <label><input type="checkbox"> Farmácia</label><br>
+                    <label><input type="checkbox"> Camas</label><br>
+                    <label><input type="checkbox"> Limpeza</label><br>
+                    <label><input type="checkbox"> Coleiras</label><br>
+                    <label><input type="checkbox"> Acessórios</label><br>
+                    <label><input type="checkbox">Acessórios de trasporte </label><br>
+                    <label><input type="checkbox"> Roupas</label><br>
+                    
+                    <!-- etc. -->
+                </div>
+            </aside>
+
+            <section class="produtos">
+                <div class="ordenar">
+                    <label for="ordenar">Ordenar por:</label>
+                    <select id="ordenar">
+                        <option>Mais relevantes</option>
+                        <option>Menor preço</option>
+                        <option>Maior preço</option>
+                        <option>Nome A-Z</option>
+                    </select>
+                </div>
+
+                <div class="grade-produtos">
+                    <!-- Produto -->
+                    <div class="produto">
+                        <img src="img/ração progato.png" alt="Produto exemplo">
+                        <h3>Ração PROGATO</h3>
+                        <p>R$ 159,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/caminha2.png" alt="Produto exemplo">
+                        <h3>Caminha em formato de flor</h3>
+                        <p>R$ 179,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/escova2 (1).png" alt="Produto exemplo">
+                        <h3>Escova Elétrica</h3>
+                        <p>R$ 186,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/3 em 1.png" alt="Produto exemplo">
+                        <h3>Comedouro Automático</h3>
+                        <p>R$ 186,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/royal canin.png" alt="Produto exemplo">
+                        <h3>Ração Royal</h3>
+                        <p>R$ 179,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/raçãpo preimer.png" alt="Produto exemplo">
+                        <h3>Ração PremieR</h3>
+                        <p>R$ 169,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/brinquedo .png" alt="Produto exemplo">
+                        <h3>Arranhador para gatos</h3>
+                        <p>R$ 50,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/maconha de gato.png" alt="Produto exemplo">
+                        <h3>Brinquedo Interativo Abacate</h3>
+                        <p>R$ 189,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/cenoura.png" alt="Produto exemplo">
+                        <h3>Brinquedo Interativo peteca</h3>
+                        <p>R$ 59,90</p>
+                        <button>+</button>
+                    </div>
+
+                    <div class="produto">
+                        <img src="img/remedio.png" alt="Produto exemplo">
+                        <h3>Remédio anti estresse</h3>
+                        <p>R$ 65,90</p>
+                        <button>+</button>
+                    </div>
+                    <!-- Repita esse bloco para mais produtos -->
+                </div>
+            </section>
+        </main>
+
+        <!--SOBRE-->
+
+    <section class="sobre">
+
+        <h3>
+            <p class="card-text2">
+                CATEGORIA POR ESPÉCIES
+            </p><br>
+        </h3>
+
+        <div class="sobre-grid">
+            <div class="item">
+
+            <a href="pagcao.html">
+                <img src="img/Cachorro.png" alt="Cachorro">
+                <p>Cachorro</p>
+            </a>
+            </div>
+            <div class="item">
+                <img src="img/Aves.png" alt="Aves">
+                <p>Aves</p>
+            </div>
+            <div class="item">
+                <img src="img/Peixes.png" alt="Peixes">
+                <p>Peixes</p>
+            </div>
+            <div class="item">
+                <img src="img/Roedores.png" alt="Roedores">
+                <p>Roedores</p>
+            </div>
+            <div class="item">
+                <img src="img/Répteis.png" alt="Répteis">
+                <p>Répteis</p>
+            </div>
+            <div class="item">
+                <img src="img/sustentavies.png" alt="Sustentáveis">
+                <p>Sustentáveis</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <!-- Coluna 1 -->
+            <ul>
+                <h3>OH MY DOG</h3>
+                <p>Oh My Dog - Amor, cuidado e diversão</p>
+                <div class="redes-social">
+                    <img src="img/facebook-removebg-preview.png" alt="Facebook">
+                    <img src="img/instagram-removebg-preview.png" alt="Instagram">
+                </div>
+            </ul>
+
+            <!-- Coluna 2 -->
+            <ul>
+                <h3>Links</h3>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Preços</a></li>
+                <li><a href="#">Baixar</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+            </ul>
+
+            <!-- Coluna 3 -->
+            <ul>
+                <h3>Suporte</h3>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="#">Características</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Comunicando</a></li>
+            </ul>
+
+            <!-- Coluna 4 -->
+            <ul>
+                <h3>Nos Contatos</h3>
+                <li>
+                    <p>+55 11 91234-5678</p>
+                </li>
+                <li>
+                    <p>ohmydog@gmail.com</p>
+                </li>
+                <li>
+                    <p>Brasil</p>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+
+<!--ion icon-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

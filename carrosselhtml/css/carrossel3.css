@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 800px;
+    overflow: hidden;
+    
+}
+
+.carrossel-vertical{
+ width: 100vw;
+ height: 800px;
+ overflow: hidden;
+ position: relative;
+}
+
+.carrossel-track-vertical {
+    display: flex;
+    flex-direction: column;
+    height: calc(800px * 3);
+    animation: slideVertical 9s infinite;
+}
+
+carrossel-track-vertical img{
+    width: 100vw;
+    height: 800px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes slideVertical{
+    0% {
+        transform: translateY(0);
+    }
+
+    33.33% {
+        transform: translateY(-800px);
+    }
+
+    66.66% {
+        transform: translateY(-1600px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

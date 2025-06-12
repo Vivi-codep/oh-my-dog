@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Oh My Dog</title>
+  <link rel="stylesheet" href="css/cadastro2.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="image-section">
+      <img src="img/cachorropreto.png" alt="Cachorro estiloso" />
+    </div>
+    <div class="form-section">
+      <div class="form-box">
+        <div class="logo-close">
+          <span class="logo"></span>
+          <a href="index.html">
+          <span class="close">✕</span>
+        </a>
+        </div>
+        <h2>Crie sua conta</h2>
+        <form>
+          <input type="text" placeholder="Digite seu nome e sobrenome" required />
+          <input type="email" placeholder="Digite seu e-mail" required />
+          <input type="text" placeholder="DDD + Celular" required />
+          <input type="text" placeholder="DDD + Telefone (opcional)" />
+          
+          <select>
+            <option disabled selected>Escolha o gênero</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Outro</option>
+            <option>Prefiro não dizer</option>
+          </select>
+          
+          <input type="date" placeholder="Digite a data de nascimento" />
+          <input type="text" placeholder="Digite o seu CPF" />
+          
+          <div class="passwords">
+            <input type="password" placeholder="Digite sua senha" required />
+            <input type="password" placeholder="Confirme sua senha" required />
+          </div>
+
+          <ul class="password-rules">
+            <li>Mínimo 8 caracteres</li>
+            <li>Letra Minúscula</li>
+            <li>Números</li>
+            <li>Letra Maiúscula</li>
+          </ul>
+
+          <label class="terms">
+            <input type="checkbox" required />
+            Concordo com os <a href="#">termos e condições</a>
+          </label>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
