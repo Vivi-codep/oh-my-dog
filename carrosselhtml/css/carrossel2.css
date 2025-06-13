@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.carrossel-horizontal-box{
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px ;
+    box-shadow: 0 0 10px rgb,(0, 0, 0.2);
+    position: relative;
+}
+
+.carrossel-track-horizontal-box{
+    display: flex;
+    width: calc(600px * 3);
+    height: 100%;
+    animation: slideHorizontalBox 9s infinite;
+}
+
+.carrossel-track-horizontal-box img{
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+@keyframes slideHorizontalBox{
+ 0%{
+    transform: translateX(0);
+ }
+
+ 33%{
+    transform: translateX(-600px);
+ }
+
+ 66%{
+    transform: translateX(-1200px);
+
+    
+ }
+
+ 100%{
+    transform: translateX(0);
+ }
+
+}

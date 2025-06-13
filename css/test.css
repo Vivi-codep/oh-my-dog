@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .top-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .search-bar {
+    flex: 1;
+    display: flex;
+    max-width: 500px;
+    margin: 0 2rem;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .search-bar button {
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .icons i {
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .menu {
+    background: white;
+    padding: 0.5rem 2rem;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .promo-bar {
+    background: #e0e0e0;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
