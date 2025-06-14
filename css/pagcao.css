@@ -142,6 +142,8 @@ body {
 
 /*HEADER*/
 
+/*HEADER*/
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -173,6 +175,7 @@ body {
   display: flex;
   max-width: 500px;
   margin: 0 1rem;
+   font-size: var(--fs-8);
 }
 
 .search-bar input {
@@ -180,15 +183,28 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 20px 0 0 20px;
+  font-size: 50%;
 }
 
 .search-bar button {
   padding: 5px 16px;
-  background:var(--background);
+  background: #fff;
   border: 1px solid #ccc;
   border-left: none;
   border-radius: 0 20px 20px 0;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+
+}
+
+.search-bar {
+  color: var(--neutrals);
+  font-size: var(--fs-3);
+  border: none;
+}
+
+.search-bar:hover button {
+  color: var(--secondary);
 }
 
 .icons {
@@ -215,7 +231,7 @@ body {
 }
 
 .menu {
-  background:var(--background);
+  background: white;
   padding: 0.5rem 2rem;
   justify-self: center;
 }
@@ -245,6 +261,28 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.btn {
+  position: relative;
+  border-radius: 10px;
+  background: var(--gradient);
+  color: var(--secondary);
+  font-size: var(--fs-f8);
+  font-weight: var(--weight-semibold);
+  max-width: 120px;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 30px;
+  clip-path: var(--clip-path-3);
+  margin-right: 70px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  color: var(--white);
 }
 
 
