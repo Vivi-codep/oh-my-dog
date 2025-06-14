@@ -257,7 +257,10 @@ body {
   color: black;
   font-weight: bold;
   font-size: var(--fs-f8);
+}
 
+.menu :hover{
+  color: var(--secondary);
 }
 
 .promo-bar {

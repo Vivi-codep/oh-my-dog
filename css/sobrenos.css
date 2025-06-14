@@ -152,8 +152,6 @@
   
 /*HEADER*/
 
-/*HEADER*/
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -185,6 +183,7 @@ body {
   display: flex;
   max-width: 500px;
   margin: 0 1rem;
+   font-size: var(--fs-8);
 }
 
 .search-bar input {
@@ -192,15 +191,28 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 20px 0 0 20px;
+  font-size: 50%;
 }
 
 .search-bar button {
   padding: 5px 16px;
-  background: #fff;
+  background: var(--background);
   border: 1px solid #ccc;
   border-left: none;
   border-radius: 0 20px 20px 0;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+
+}
+
+.search-bar {
+  color: var(--background);
+  font-size: var(--fs-3);
+  border: none;
+}
+
+.search-bar:hover button {
+  color: var(--secondary);
 }
 
 .icons {
@@ -217,7 +229,7 @@ body {
 .login-btn {
   /*border: 1px solid black;*/
   border-radius: 10px;
-  background: var(--gradient);
+  background: var(--secondary);
   padding: 6px 12px;
   cursor: pointer;
   display: flex;
@@ -227,7 +239,7 @@ body {
 }
 
 .menu {
-  background: white;
+  background: var(--background);
   padding: 0.5rem 2rem;
   justify-self: center;
 }
@@ -245,7 +257,10 @@ body {
   color: black;
   font-weight: bold;
   font-size: var(--fs-f8);
+}
 
+.menu :hover{
+  color: var(--secondary);
 }
 
 .promo-bar {
@@ -259,18 +274,9 @@ body {
   gap: 10px;
 }
 
-
-/*.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
 .btn {
   position: relative;
+  border-radius: 10px;
   background: var(--gradient);
   color: var(--secondary);
   font-size: var(--fs-f8);
@@ -282,104 +288,13 @@ body {
   justify-content: center;
   padding-inline: 30px;
   clip-path: var(--clip-path-3);
+  margin-right: 70px;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  color: var(--secondary);
+  color: var(--white);
 }
-
-.logo img {
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.header {
-  background-color: var(--background);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 25px 12px;
-  z-index: 4;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-list {
-  display: flex;
-}
-
-.header.active {
-  position: relative;
-  animation: slideUp 1s ease forwards;
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.navbar-link {
-  padding: 12px 15px;
-  text-transform: uppercase;
-  font-size: var(--fs-f8);
-  font-weight: var(--weight-semibold);
-  color: var(--neutrals);
-  transition: color 0.3s ease;
-}
-
-.navbar-link:hover {
-  color: var(--secondary);
-}
-
-.search-btn {
-  color: var(--neutrals);
-  font-size: var(--fs-3);
-  border: none;
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.search-btn:hover {
-  transform: scale(1.2);
-  color: var(--secondary);
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ff9900;
-}
-
-nav .btn {
-    background-color: #ffcc00;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-nav .btn:hover {
-    background-color: #ffaa00;
-}*/
 
 /* Banner */
 .banner {
@@ -387,6 +302,7 @@ nav .btn:hover {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .banner img {
@@ -461,72 +377,6 @@ nav .btn:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 20px 0;
-}
-
-.botoes button {
-    background-color: #eee;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.botoes button:hover {
-    background-color: var(--secondary);
-}
-
-/* Valores */
-.valores {
-    text-align: center;
-    padding: 50px;
-}
-
-.valores h2 {
-    margin-bottom: 30px;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 250px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.5s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #555;
-}
-
-/* Botões */
-.botoes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
     margin: 80px 0;
 }
 
@@ -579,6 +429,72 @@ nav .btn:hover {
 .botoes button img {
   width: 35px;
   height: 35px;
+}
+
+/* Valores */
+.valores {
+    text-align: center;
+    padding: 50px;
+}
+
+.valores h2 {
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+}
+
+/* Missão */
+
+.missao {
+    text-align: center;
+    padding: 50px;
+}
+
+.missao h2 {
+    margin-bottom: 30px;
+}
+
+/* Valores */
+
+.visao {
+    text-align: center;
+    padding: 50px;
+}
+
+.visao h2 {
+    margin-bottom: 30px;
 }
 
 /* Footer */
